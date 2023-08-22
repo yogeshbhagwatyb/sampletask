@@ -28,7 +28,6 @@ resource "aws_security_group" "lambda_sg" {
   }
 }
 
-}
 
 data "archive_file" "task_function" {
   type             = "zip"
