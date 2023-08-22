@@ -20,7 +20,7 @@ def lambda_handler(event, context):
         "email": yogeshbhagwat477@gmail.com
     }
     
-    # Convert payload to JSON
+   
     payload_json = json.dumps(payload)
     
     try:
