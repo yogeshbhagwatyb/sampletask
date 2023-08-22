@@ -30,25 +30,20 @@ resource "aws_security_group" "lambda_sg" {
 
 }
 
-
 data "archive_file" "task_function" {
   type             = "zip"
-  source_file      = "${path.module}/src/lbd_get_incoming.py"
-  output_path      = "${path.module}/bin/lbd_get_incoming.zip"
+  source_file      = "lambda_function.py"
+  output_path      = "mylf.zip"
 }
 
-resource "aws_lambda_function" "sample_lambda_func_lambda" {
-              filename = "sample_lambda_func.zip"
-}
             
 
-resource "aws_lambda_function" "example" {
-   function_name    = "lambda_function.py"
+resource "aws_lambda_function" "yogesh_function" {
+   function_name    = "yogesh_function"
    role             = data.aws_iam_role.lambda.arn
-   image_uri        = "3.devops.candidate.exam"
-   handler          = "lambda_function.handler"
-   runtime          = "python3.10"
-   filename         = "sample_lambda_func.zip"
+   handler          = "lambda_function.lambda_handler"
+   runtime          = "python3.8"
+   filename         = "mylf.zip"
  
 
   vpc_config {
