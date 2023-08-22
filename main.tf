@@ -3,12 +3,10 @@ resource "aws_vpc" "myVPC" {
 }
 
 
-#resource "aws_subnet" "private_subnets" {
+resource "aws_subnet" "private_subnets" {
 #  count = 4
-
-#
 # cidr_block = "10.0.${count.index - 1}.0/24"
-# cidr_block = ["10.0.240.0/24", "10.0.241.0/24", "10.0.242.0/24", "10.0.243.0/24"]
+ cidr_block = ["10.0.240.0/24", "10.0.241.0/24", "10.0.242.0/24", "10.0.243.0/24"]
 
 
  vpc_id     = data.aws_vpc.vpc.id
