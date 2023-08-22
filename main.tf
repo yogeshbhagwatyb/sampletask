@@ -1,3 +1,8 @@
+resource "aws_vpc" "myVPC" {
+  cidr_block           = 10.0.254.0/24
+}
+
+
 resource "aws_subnet" "private_subnets" {
   count = 4
 
