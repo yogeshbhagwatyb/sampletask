@@ -34,8 +34,9 @@ resource "aws_security_group" "lambda_sg" {
   vpc_id = data.aws_vpc.vpc.id
 }
 
-resource "aws_lambda_function" "my_lambda" {
+resource "aws_lambda_function" "sample_lambda_func_lambda" {
               filename = "sample_lambda_func.zip"
+}
             
 
 resource "aws_lambda_function" "example" {
