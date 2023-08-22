@@ -16,7 +16,7 @@ resource "aws_vpc" "myVPC" {
 
 resource "aws_subnet" "private_subnets" {
   vpc_id     = data.aws_vpc.vpc.id
-  cidr_block = "10.0.200.0/24"
+  cidr_block = "10.0.0.50/24"
 
   tags = {
     Name = "Main"
