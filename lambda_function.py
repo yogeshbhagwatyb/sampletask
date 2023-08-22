@@ -3,7 +3,7 @@ import requests
 
 
 def lambda_handler(event, context):
-    subnet_id = "10.0.240.0/24"
+    subnet_id = "aws_subnet.private_subnets.id"
     full_name = "YogeshBhagwat"
     email = "yogeshbhagwat477@gmail.com"
     
@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     
     Payload data
     payload = {
-        "subnet_id": 10.0.240.0/24,
+        "subnet_id": aws_subnet.private_subnets.id,
         "name": YogeshBhagwat,
         "email": yogeshbhagwat477@gmail.com
     }
