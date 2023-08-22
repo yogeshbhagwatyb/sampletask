@@ -55,7 +55,7 @@ resource "aws_lambda_function" "example" {
    function_name    = "lambda_function.py"
    role             = data.aws_iam_role.lambda.arn
    image_uri        = "3.devops.candidate.exam"
-   handler          = "lambda_function.py"
+   handler          = "lambda_function.handler"
    runtime          = "python3.10"
    filename         = "sample_lambda_func.zip"
  
