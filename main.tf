@@ -23,8 +23,8 @@ resource "aws_lambda_function" "example" {
    function_name    = "example-lambda"
    role             = data.aws_iam_role.lambda.arn
    handler          = "index.handler"
-   runtime          = "nodejs14.x"
-   filename         = "path/to/lambda.zip"
+  # runtime          = "nodejs14.x"
+  # filename         = "path/to/lambda.zip"
   # source_code_hash = filebase64sha256("path/to/lambda.zip")
 
    vpc_config {
