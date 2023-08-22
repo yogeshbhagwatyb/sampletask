@@ -24,6 +24,7 @@ resource "aws_route_table" "private" {
   vpc_id = data.aws_vpc.vpc.id
 }
 
+
 resource "aws_route_table_association" "private" {
   count          = 4
   subnet_id      = aws_subnet.private_subnets.id
