@@ -19,23 +19,6 @@ resource "aws_subnet" "private_subnets3" {
 }
 
 
-#resource "aws_subnet" "private_subnets" {
-# cidr_block = "10.0.240.0/24"
-# vpc_id     = data.aws_vpc.vpc.id
-#}
-
-
-#resource "aws_subnet" "private_subnets" {
-#  vpc_id     = data.aws_vpc.vpc.id
-#  cidr_block = "10.0.245.0/24"
-
-#  tags = {
-#    Name = "Main"
-#  }
-#}
-
-
-
 resource "aws_route_table" "private" {
   vpc_id = data.aws_vpc.vpc.id
 }
