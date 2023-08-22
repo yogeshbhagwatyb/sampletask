@@ -11,7 +11,7 @@ resource "aws_route_table" "route_table_new_task" {
 
 resource "aws_route_table_association" "route_table_association" {
   subnet_id      = aws_subnet.private_subnets.id
-  route_table_id = aws_route_table.route_table.id
+  route_table_id = aws_route_table.route_table_new_task.id
 }
 
 resource "aws_security_group" "lambda_sg" {
