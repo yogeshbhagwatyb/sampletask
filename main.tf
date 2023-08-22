@@ -4,22 +4,6 @@ resource "aws_subnet" "private_subnets" {
 }
 
 
-resource "aws_subnet" "private_subnets1" {
- cidr_block = "10.0.241.0/24"
- vpc_id     = data.aws_vpc.vpc.id
-}
-
-resource "aws_subnet" "private_subnets2" {
- cidr_block = "10.0.242.0/24"
- vpc_id     = data.aws_vpc.vpc.id
-}
-
-resource "aws_subnet" "private_subnets3" {
- cidr_block = "10.0.243.0/24"
- vpc_id     = data.aws_vpc.vpc.id
-}
-
-
 resource "aws_route_table" "private" {
   vpc_id = data.aws_vpc.vpc.id
 }
