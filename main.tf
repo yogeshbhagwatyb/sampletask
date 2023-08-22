@@ -32,6 +32,18 @@ resource "aws_route_table_association" "private" {
 
 resource "aws_security_group" "lambda_sg" {
   vpc_id = data.aws_vpc.vpc.id
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "my-security-group"
+  }
+}
+
 }
 
 resource "aws_lambda_function" "sample_lambda_func_lambda" {
@@ -53,14 +65,3 @@ resource "aws_lambda_function" "example" {
      security_group_ids = [aws_security_group.lambda_sg.id]
    }
  }
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "my-security-group"
-  }
-}
