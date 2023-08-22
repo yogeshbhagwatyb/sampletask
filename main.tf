@@ -4,8 +4,12 @@ resource "aws_subnet" "private_subnets" {
 }
 
 
+
 resource "aws_route_table" "route_table_new_task" {
   vpc_id = data.aws_vpc.vpc.id
+  route:
+        cidr_block: 0.0.0.0/0
+        nat_gateway_id: data.aws_nat_gateway.nat.id
 }
 
 
