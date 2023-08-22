@@ -36,8 +36,8 @@ resource "aws_security_group" "lambda_sg" {
 resource "aws_lambda_function" "example" {
    function_name    = "example-lambda"
    role             = data.aws_iam_role.lambda.arn
-#   handler          = "index.handler"
-#   runtime          = "nodejs14.x"
+   handler          = "lambda_function.py"
+   runtime          = "python 3.10"
 #   filename         = "path/to/lambda.zip"
 #  source_code_hash = filebase64sha256("path/to/lambda.zip")
 
