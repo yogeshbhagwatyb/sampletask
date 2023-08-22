@@ -25,7 +25,7 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table_association" "private" {
-  count          = 4
+#  count          = 4
   subnet_id      = aws_subnet.private_subnets.id
   route_table_id = aws_route_table.private.id
 }
