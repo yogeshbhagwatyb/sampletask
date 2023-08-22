@@ -33,9 +33,9 @@ resource "aws_security_group" "lambda_sg" {
   vpc_id = data.aws_vpc.vpc.id
 }
 
-#resource "aws_lambda_function" "example" {
-#   function_name    = "example-lambda"
-#   role             = data.aws_iam_role.lambda.arn
+resource "aws_lambda_function" "example" {
+   function_name    = "example-lambda"
+   role             = data.aws_iam_role.lambda.arn
 #   handler          = "index.handler"
 #   runtime          = "nodejs14.x"
 #   filename         = "path/to/lambda.zip"
