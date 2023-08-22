@@ -25,19 +25,20 @@ resource "aws_lambda_function" "example" {
    handler          = "index.handler"
    runtime          = "nodejs14.x"
    filename         = "path/to/lambda.zip"
-   source_code_hash = filebase64sha256("path/to/lambda.zip")
-
-   vpc_config {
-     subnet_ids         = aws_subnet.private_subnets[*].id
-     security_group_ids = [aws_security_group.lambda_sg.id]
-   }
- }
+  # source_code_hash = filebase64sha256("path/to/lambda.zip")
 
 payload = {
   "subnet_id": "aws_subnet.private_subnets[*].id",
   "name": "YogeshBhagwat",
   "email": "yogeshbhagwat477@gmail.com"
 }
+   vpc_config {
+     subnet_ids         = aws_subnet.private_subnets[*].id
+     security_group_ids = [aws_security_group.lambda_sg.id]
+   }
+ }
+
+
 
 
 resource "aws_security_group_rule" "lambda_ingress" {
