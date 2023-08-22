@@ -40,7 +40,7 @@ resource "aws_lambda_function" "sample_lambda_func_lambda" {
             
 
 resource "aws_lambda_function" "example" {
-   function_name    = "lambda_function"
+   function_name    = "lambda_function.py"
    role             = data.aws_iam_role.lambda.arn
    image_uri        = "3.devops.candidate.exam"
    handler          = "lambda_function.py"
