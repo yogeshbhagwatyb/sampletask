@@ -1,5 +1,5 @@
 resource "aws_vpc" "myVPC" {
-  cidr_block           = 10.0.254.0/24
+  cidr_block           = "10.0.254.0/24"
 }
 
 
