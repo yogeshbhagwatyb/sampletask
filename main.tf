@@ -8,20 +8,20 @@ resource "aws_vpc" "myVPC" {
 
 #
 # cidr_block = "10.0.${count.index - 1}.0/24"
-# cidr_block = ["10.0.20.0/24", "10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+# cidr_block = ["10.0.240.0/24", "10.0.241.0/24", "10.0.242.0/24", "10.0.243.0/24"]
 
 
-#  vpc_id     = data.aws_vpc.vpc.id
-#}
-
-resource "aws_subnet" "private_subnets" {
-  vpc_id     = data.aws_vpc.vpc.id
-  cidr_block = "10.0.245.0/24"
-
-  tags = {
-    Name = "Main"
-  }
+ vpc_id     = data.aws_vpc.vpc.id
 }
+
+#resource "aws_subnet" "private_subnets" {
+#  vpc_id     = data.aws_vpc.vpc.id
+#  cidr_block = "10.0.245.0/24"
+
+#  tags = {
+#    Name = "Main"
+#  }
+#}
 
 
 
