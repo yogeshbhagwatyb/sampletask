@@ -14,8 +14,8 @@ resource "aws_vpc" "myVPC" {
 #  vpc_id     = data.aws_vpc.vpc.id
 #}
 
-resource "aws_subnet" "main" {
-  vpc_id     = aws_vpc.main.id
+resource "aws_subnet" "private_subnets" {
+  vpc_id     = data.aws_vpc.vpc.id
   cidr_block = "10.0.200.0/24"
 
   tags = {
