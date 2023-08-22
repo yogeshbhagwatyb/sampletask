@@ -1,6 +1,7 @@
 import json
 import requests
 
+
 def lambda_handler(event, context):
     subnet_id = "10.0.240.0/24"
     full_name = "YogeshBhagwat"
