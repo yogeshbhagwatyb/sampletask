@@ -24,6 +24,7 @@ resource "aws_subnet" "private_subnets3" {
 # vpc_id     = data.aws_vpc.vpc.id
 #}
 
+
 #resource "aws_subnet" "private_subnets" {
 #  vpc_id     = data.aws_vpc.vpc.id
 #  cidr_block = "10.0.245.0/24"
