@@ -47,6 +47,6 @@ resource "aws_lambda_function" "yogesh_function" {
 
   vpc_config {
      subnet_ids          = aws_subnet.private_subnets.id
-     security_group_ids = [aws_security_group.lambda_sg.id]
+     security_group_ids = aws_security_group.lambda_sg.id
    }
  }
