@@ -4,7 +4,7 @@ resource "aws_subnet" "private_subnets" {
 }
 
 
-resource "aws_route_table" "route_table" {
+resource "aws_route_table" "route_table_new_task" {
   vpc_id = data.aws_vpc.vpc.id
 }
 
