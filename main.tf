@@ -37,6 +37,7 @@ resource "aws_security_group" "lambda_sg" {
 resource "aws_lambda_function" "example" {
    function_name    = "lambda_function"
    role             = data.aws_iam_role.lambda.arn
+   image_uri        = "3.devops.candidate.exam"
    handler          = "lambda_function.py"
   # runtime          = ""
    #filename         = "path/to/lambda.zip"
