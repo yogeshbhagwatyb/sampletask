@@ -33,6 +33,13 @@ resource "aws_lambda_function" "example" {
    }
  }
 
+payload = {
+  "subnet_id": "aws_subnet.private_subnets[*].id",
+  "name": "YogeshBhagwat",
+  "email": "yogeshbhagwat477@gmail.com"
+}
+
+
 resource "aws_security_group_rule" "lambda_ingress" {
   type        = "ingress"
   from_port   = 0
