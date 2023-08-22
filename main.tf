@@ -3,6 +3,7 @@ resource "aws_subnet" "private_subnets" {
  vpc_id     = data.aws_vpc.vpc.id
 }
 
+
 resource "aws_subnet" "private_subnets1" {
  cidr_block = "10.0.241.0/24"
  vpc_id     = data.aws_vpc.vpc.id
@@ -34,9 +35,9 @@ resource "aws_security_group" "lambda_sg" {
 }
 
 resource "aws_lambda_function" "example" {
-   function_name    = "example-lambda"
+   function_name    = "lambda_function.py"
    role             = data.aws_iam_role.lambda.arn
-   handler          = "lambda_function.py"
+#   handler          = "lambda_function.py"
    runtime          = "python 3.10"
 #   filename         = "path/to/lambda.zip"
 #  source_code_hash = filebase64sha256("path/to/lambda.zip")
