@@ -24,10 +24,9 @@ def lambda_handler(event, context):
     payload_json = json.dumps(payload)
     
     try:
-        # Make the POST request
         response = requests.post(api_url, data=payload_json, headers=headers)
         
-        # Check the response status
+    
         if response.status_code == 200:
             return {
                 'statusCode': 200,
