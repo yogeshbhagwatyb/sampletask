@@ -3,15 +3,27 @@ resource "aws_vpc" "myVPC" {
 }
 
 
-resource "aws_subnet" "private_subnets" {
-  count = 4
+#resource "aws_subnet" "private_subnets" {
+#  count = 4
 
-  cidr_block = "10.0.${count.index - 1}.0/24"
- #cidr_block = ["10.0.20.0/24", "10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+#
+# cidr_block = "10.0.${count.index - 1}.0/24"
+# cidr_block = ["10.0.20.0/24", "10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
 
 
-  vpc_id     = data.aws_vpc.vpc.id
+#  vpc_id     = data.aws_vpc.vpc.id
+#}
+
+resource "aws_subnet" "main" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.200.0/24"
+
+  tags = {
+    Name = "Main"
+  }
 }
+
+
 
 resource "aws_route_table" "private" {
   vpc_id = data.aws_vpc.vpc.id
