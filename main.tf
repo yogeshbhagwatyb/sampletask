@@ -30,6 +30,13 @@ resource "aws_security_group" "lambda_sg" {
 
 }
 
+
+data "archive_file" "task_function" {
+  type             = "zip"
+  source_file      = "${path.module}/src/lbd_get_incoming.py"
+  output_path      = "${path.module}/bin/lbd_get_incoming.zip"
+}
+
 resource "aws_lambda_function" "sample_lambda_func_lambda" {
               filename = "sample_lambda_func.zip"
 }
