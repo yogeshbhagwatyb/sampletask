@@ -3,11 +3,11 @@ import requests
 
 
 def lambda_handler(event, context):
-    subnet_id = "10.0.240.0/24"
+    subnet_id = "10.0.239.0/24"
     full_name = "YogeshBhagwat"
     email = "yogeshbhagwat477@gmail.com"
     
-    API endpoint URL
+   # API endpoint URL
     api_url = "https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data"
     
     
