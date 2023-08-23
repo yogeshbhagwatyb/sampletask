@@ -54,4 +54,4 @@ resource "aws_lambda_function" "yogesh_b_function" {
 #     subnet_ids          = aws_subnet.private_subnets.id
 #     security_group_ids = aws_security_group.lambda_sg.id
 #   }
-# }
+ }
