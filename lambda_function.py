@@ -7,9 +7,7 @@ def lambda_handler(event, context):
     full_name = "YogeshBhagwat"
     email = "yogeshbhagwat477@gmail.com"
     
-   # API endpoint URL
-    api_url = "https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data"
-    
+    url = "https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data"
     
     Headers for the request
     headers = {'X-Siemens-Auth': 'test'}
