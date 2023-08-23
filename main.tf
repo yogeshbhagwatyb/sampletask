@@ -42,8 +42,8 @@ data "archive_file" "task_function" {
 
             
 
-resource "aws_lambda_function" "yogesh_s_b1_function" {
-   function_name    = "yogesh_s_b1_function"
+resource "aws_lambda_function" "yogesh_s_b2_function" {
+   function_name    = "yogesh_s_b2_function"
    role             = data.aws_iam_role.lambda.arn
    handler          = "lambda_function.lambda_handler"
    runtime          = "python3.7"
