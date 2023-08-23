@@ -28,7 +28,7 @@ pipeline{
         stage("Invoke Lambda"){
             steps{
                 echo "Invoking your AWS Lambda"
-              ##  sh '''aws lambda invoke --function-name "yogesh_b_function" --log-type Tail'''###
+             
                 sh "aws lambda invoke --function-name yogesh_b_function out --log-type Tail "
                 
             }
