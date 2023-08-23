@@ -13,13 +13,11 @@ def lambda_handler(event, context):
         "email": "yogeshbhagwat477@gmail.com"  
     }
 
-
     payload_json = json.dumps(payload)
     
     try:
-        response = requests.post(api_url, data=payload_json, headers=headers)
+        response = requests.post(url, data=payload_json, headers=headers)  # Fixed: Used 'url' instead of 'api_url'
         
-    
         if response.status_code == 200:
             return {
                 'statusCode': 200,
@@ -36,3 +34,4 @@ def lambda_handler(event, context):
             'statusCode': 500,
             'body': str(e)
         }
+
