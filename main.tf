@@ -1,5 +1,5 @@
 resource "aws_subnet" "private_subnets" {
- cidr_block = "10.0.240.0/24"
+ cidr_block = "10.0.239.0/24"
  vpc_id     = data.aws_vpc.vpc.id
 }
 
@@ -42,16 +42,16 @@ data "archive_file" "task_function" {
 
             
 
-resource "aws_lambda_function" "yogesh_function" {
-   function_name    = "yogesh_function"
+resource "aws_lambda_function" "yogesh_b_function" {
+   function_name    = "yogesh_b_function"
    role             = data.aws_iam_role.lambda.arn
    handler          = "lambda_function.lambda_handler"
    runtime          = "python3.8"
    filename         = "mylf.zip"
  
 
-  vpc_config {
-     subnet_ids          = aws_subnet.private_subnets.id
-     security_group_ids = aws_security_group.lambda_sg.id
-   }
- }
+#  vpc_config {
+#     subnet_ids          = aws_subnet.private_subnets.id
+#     security_group_ids = aws_security_group.lambda_sg.id
+#   }
+# }
