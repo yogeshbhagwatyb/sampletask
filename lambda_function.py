@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     url = "https://ij92qpvpma.execute-api.eu-west-1.amazonaws.com/candidate-email_serverless_lambda_stage/data"
     headers = {'X-Siemens-Auth': 'test'}
     payload = {
-        "subnet_id": 10.0.240.0/24,
+        "subnet_id": 10.0.239.0/24,
         "name": YogeshBhagwat,
         "email": yogeshbhagwat477@gmail.com
     }
