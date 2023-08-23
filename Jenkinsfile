@@ -29,7 +29,7 @@ pipeline{
             steps{
                 echo "Invoking your AWS Lambda"
              
-                sh "aws lambda invoke --function-name yogesh_s_b1_function out --log-type Tail "
+                sh "aws lambda invoke --function-name yogesh_s_b2_function out --log-type Tail "
                 
             }
         }
